@@ -1,0 +1,14 @@
+echo "Deleting extra files in tmp/"
+rm -rf tmp/
+mkdir tmp
+FILES=SQL-Generated/*
+for f in $FILES
+do
+  echo "Starting: Processing $f file..."$(date)
+  mysql -uroot -pmiguel "jmjrdf" < $f
+  echo "Finished "$(date)
+done
+
+echo "Creating indexes"
+mysql -uroot -pmiguel "jmjrdf" < scripts/SQL/index_creation.sql
+echo "Done! enjoy your new database!"

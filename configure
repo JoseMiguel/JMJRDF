@@ -1,0 +1,26 @@
+#username='root'
+#password='root'
+
+username='root'
+password='miguel'
+
+echo "Creating folders...";
+mkdir logs
+echo "- logs"
+mkdir SQL-Generated
+echo "- SQL"
+mkdir tmp
+echo "- tmp"
+echo "Finished folder creation";
+
+echo "Creating database...";
+
+eval "mysql -u$username -p$password --execute='create database jmjrdf'";
+eval "mysql -u$username -p$password jmjrdf < 'scripts/SQL/table_creation.sql'"
+
+echo "Finished database creation";
+
+#$tables
+
+#rm -r tmp
+
