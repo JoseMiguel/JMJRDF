@@ -43,11 +43,13 @@ int main(int argc, char *argv[]){
 		generate_triplets(log, argv[1]);
 		if ( !fork() ){
 			if ( !fork() ){
+
 				get_column( init_log("g-col1"), 1, 0 );
+
 			}else{
-				get_column( init_log("g-col2"), 2, 0 ); // this is the lighter one!! 
+				get_column( init_log("g-col2"), 2, 0 );
 				// I'm gonna re-use this process to generate the hash of the triplets
-				insertTrip();
+				insertTrip(); //triplet insertion
 			}
 			return 0;
 		}else{
@@ -73,7 +75,6 @@ int main(int argc, char *argv[]){
 		fclose(log);
 	}else{
 		puts("USAGE: ./run rdf-file.ttl");
-
 	}
 
 	return 0;
