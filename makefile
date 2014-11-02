@@ -1,6 +1,6 @@
 CC=gcc
 CFLAGS= -I. -lm -fno-stack-protector
-#DEBUG
+#DEBUG - using gdb
 #CFLAGS= -I. -lm -fno-stack-protector -g 
 DEPS = scripts/struct_support.h scripts/md5.h
 OBJ = scripts/struct.o scripts/struct_support.o scripts/md5.o
