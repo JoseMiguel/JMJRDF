@@ -1,8 +1,8 @@
 #username='root'
 #password='root'
 
-username='root'
-password='miguel'
+username='username'
+password='password'
 
 echo "Creating folders...";
 mkdir logs

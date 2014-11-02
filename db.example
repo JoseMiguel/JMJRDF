@@ -10,5 +10,5 @@ do
 done
 
 echo "Creating indexes"
-mysql -uroot -pmiguel "jmjrdf" < scripts/SQL/index_creation.sql
+mysql -uUSERNAME -pPASSWORD "jmjrdf" < scripts/SQL/index_creation.sql
 echo "Done! enjoy your new database!"
