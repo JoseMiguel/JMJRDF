@@ -3,7 +3,9 @@ freebase-etl
 
 put freebase rdf structure into mysql
 
-using hash-md5-binary optimization for keys
+mysql star-scheme for each element of the triplets
+
+using hash-md5-binary optimization in order to improve speed for key-index
 
 install
 ==========
